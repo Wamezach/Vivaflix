@@ -1,0 +1,25 @@
+const movies1 = [
+    { title: "Ang Kapitbahay", duration: "120 Min", genre: "Action", img: "Images/ANG_KAPITBAHAY.png", url: "https://mega.nz/embed/Z4wUFB7Y#ufSzwuD76i6OOC1AivD8rHIS8hEZ3kvAGRJmc5C6fn4", synopsis: "Thriller about an innocent college boy and the woman who would introduce him to manhood. Alex meets his new sultry neighbor, Rose, who awakens his sexual desire and gives him his first sexual experience only to learn a trap awaits him" },
+    { title: "Pintor at Paraluman", duration: "120 Min", genre: "Adventure", img: "Images/Pintor_at_Paraluman.png", url: "https://mega.nz/embed/4oQXBaqJ#c-X0NMlZz4RYLI4E7U-nvrtLoeG_q-ilF8IKTe8fJzc" },
+    { title: "Batman Vs Superman", duration: "120 Min", genre: "Thriller", img: "m3.jpg" },
+    { title: "John Wick: Chapter 2", duration: "120 Min", genre: "Adventure", img: "m4.jpg" },
+    { title: "Aquaman", duration: "120 Min", genre: "Action", img: "m5.jpg" },
+    { title: "Black Panther", duration: "120 Min", genre: "Action", img: "m6.jpg" },
+    { title: "Thor", duration: "120 Min", genre: "Action", img: "m7.jpg" },
+    { title: "Bumblebee", duration: "120 Min", genre: "Action", img: "m8.png" },
+    { title: "Mortal Engines", duration: "120 Min", genre: "Action", img: "m9.jpg" },
+    { title: "Underworld: Blood Wars", duration: "120 Min", genre: "Action", img: "m10.jpg" },
+    { title: "Inception", duration: "148 Min", genre: "Science Fiction", img: "m11.jpg" },
+    { title: "The Dark Knight", duration: "152 Min", genre: "Action", img: "m12.jpg" },
+    { title: "Toy Story 4", duration: "100 Min", genre: "Animation", img: "m13.jpg" },
+    { title: "Spider-Man: Far From Home", duration: "129 Min", genre: "Action", img: "m14.jpg" },
+    { title: "Guardians of the Galaxy", duration: "121 Min", genre: "Action", img: "m15.jpg" },
+    { title: "The Lion King", duration: "118 Min", genre: "Animation", img: "m16.jpg" },
+    { title: "Frozen II", duration: "103 Min", genre: "Animation", img: "m17.jpg" },
+    { title: "Wonder Woman 1984", duration: "151 Min", genre: "Action", img: "m18.jpg" },
+    { title: "Black Widow", duration: "134 Min", genre: "Action", img: "m19.jpg" },
+    { title: "Shang-Chi", duration: "132 Min", genre: "Action", img: "m20.jpg" },
+    { title: "Veil", duration: "120 Min", genre: "Action", img: "m1.jpg", url: "venom.html" },
+    { title: "Veil2", duration: "120 Min", genre: "Action", img: "m1.jpg", url: "venom.html" } // Removed duplicates
+];
+export default movies1;

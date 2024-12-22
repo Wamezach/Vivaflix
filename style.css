@@ -1,0 +1,533 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+a:hover {
+  color: orangered;
+}
+
+.button {
+  cursor: pointer;
+}
+.search-container {
+display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  position: fixed; /* Make it fixed */
+  height: 100%; /* Full height */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-box {
+  padding: 5px;
+  font-size: 1rem;
+  border: 2px solid red; /* Match your theme */
+  border-radius: 0.3rem;
+  background-color: white; /* Change as needed */
+  color: black; /* Change as needed */
+  margin-right: 10px; /* Spacing between input and button */
+}
+
+.search-box::placeholder {
+  color: gray; /* Placeholder color */
+}
+.movie-iframe {
+  width: 100%; /* Full width */
+  height: 540px; /* Fixed height */
+  border: none; /* Remove default border */
+  border-radius: 0.5rem; /* Optional: Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px 0; /* Vertical margins for spacing */
+  padding: 0; /* Padding not applicable on iframe but can be adjusted on container */
+}
+
+/* Optional: If you want to center it and add padding to the container */
+.iframe-container {
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  padding: 10px; /* Padding around the iframe */
+}
+
+.search-container .btn {
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 10px;
+}
+
+.btn {
+  width: 100px;
+  height: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: orangered;
+  border: 2px solid white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Additional styles below */
+.home {
+  position: relative;
+  width: 100%;
+  height:30px;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px; /* Increased height for better alignment */
+  border-radius: 0.5rem;
+  background: none; /* Change to a solid background color if needed */
+  position: absolute; /* Keep absolute positioning if desired */
+  top: 0;
+
+  width: calc(100% - 40px); /* Full width minus the margins */
+  margin: 10px 20px; /* External margin for separation */
+  padding: 0 20px; /* Internal padding for content spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+header img {
+  width: 60px;
+  height: 35px;
+  border-radius: 0.3rem; /* Logo corner rounding */
+}
+
+header nav {
+  width: auto; /* Allow nav to take up remaining space */
+  margin-top: 0; /* Adjusted margin */
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px; /* Adjusted gap */
+  border: 2px solid #ccc; /* Softer border color */
+  border-radius: 0.7rem;
+  background-color: #f8f8f8; /* Subtle background color */
+  padding: 10px; /* Padding adjusted for better spacing */
+  list-style: none; /* Remove bullet points */
+  align-items: center; /* Center vertically */
+  margin: 0; /* Reset margin */
+}
+
+header nav ul li {
+  flex-grow: 1; /* Allow list items to grow and fill available space */
+  position: relative; /* For hover effects */
+}
+
+header nav ul li a {
+  text-decoration: none; /* Remove underlines */
+  color: #333; /* Darker text color */
+  font-weight: 600; /* Medium bold text */
+  padding: 10px 15px; /* Adjusted padding for links */
+  display: block; /* Make the entire area clickable */
+  transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
+}
+
+header nav ul li a:hover {
+  color: white; /* Text color on hover */
+  background-color: red; /* Red background color on hover */
+  border-radius: 0.5rem; /* Slightly rounded corners on hover */
+}
+
+
+
+.home-text {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  color: white;
+  gap: 5px;
+}
+
+.home-text h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home-text h1 {
+  font-size: 4.5rem;
+}
+
+.play i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 70px;
+  cursor: pointer;
+  border: 2px solid white;
+  background: orangered;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255, 180, 58, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+  }
+  80% {
+    box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 rgb(255, 193, 7, 0);
+  }
+}
+ .horizontal-layout {
+            display: flex; /* Use flexbox for horizontal layout */
+            align-items: center; /* Vertically center the items */
+            justify-content: left; /* Center the entire layout */
+        }
+        .imageclass {
+            max-width: 100px; /* Set a maximum width for the image */
+            margin-left: 20px; /* Add some space between the image and the vertical line */
+margin-top: 20px; /* Add some space between the image and the vertical line */
+margin-right: 20px; /* Add some space between the image and the vertical line */
+        }
+        .vertical-line {
+            width: 2px; /* Width of the line */
+            background-color: red; /* Color of the line */
+            height: 100px; /* Height of the line (adjust as needed) */
+            margin: 0 10px; /* Margins for spacing */
+        }
+.synopsis {
+            max-width: 600px; /* Set a maximum width for the synopsis */
+            color: white; /* Ensure synopsis text is red */
+ transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px; /* Adjust the padding value as needed */
+        }
+.synopsis-link {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use inherited text color from parent */
+}
+
+.synopsis-link:hover .synopsis {
+    opacity: 0.8; /* Example hover effect */
+    transition: opacity 0.3s ease; /* Ensure transition is smooth */
+}
+.release {
+            max-width: 600px; /* Set a maximum width for the synopsis */
+            color: red; /* Ensure synopsis text is red */
+        }
+.movies {
+  width: 100%;
+  height: auto;
+}
+
+.heading {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading h1 {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 3px solid;
+  border-left: 3px solid;
+  color: red;
+}
+
+.quality-duration-genre {
+    display: flex;
+    justify-content: space-between; /* Aligns quality, genre, and duration to be on opposite sides */
+    align-items: flex-start;        /* Aligns items at the top */
+    margin-bottom: 8px;             /* Space between quality/genre/duration and the image */
+    padding: 8px 0;                 /* Padding for top and bottom spacing */
+}
+
+.quality, .genre, .duration {
+    background-color: red; /* Red background for all elements */
+    color: #fff;           /* White text */
+    padding: 4px 10px;     /* Spacing around the text (4px top/bottom, 10px left/right) */
+    border-radius: 4px;    /* Rounded corners */
+    font-weight: bold;      /* Bold text */
+    font-size: 14px;        /* Font size */
+    margin-right: 8px;     /* Space between elements */
+}
+
+/* Remove any previous align-self property if it's not required
+.align-self: center;    /* Center vertically if needed - can be removed since they are already aligned at top */
+
+.movie-card img:hover + h1 + h2 + .synopsis { /* Show synopsis on image hover */
+  display: block; /* Allow the block to render */
+  opacity: 1; /* Make it fully visible */
+}
+.movie-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+  width: 100%;
+
+overflow: hidden; /* Ensures synopsis doesn't leak out of card */z
+}
+.movie-card {
+  width: 250px;
+  height: 410px;
+  border: 2px solid white;
+  border-radius: 0.3rem; /* Fixed typo; should be 'rem' not 'rem' */
+  background: rgba(0, 0, 0, 0.274);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Adds perspective to the container for 3D effect */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s; /* Duration of flip effect */
+  transform-style: preserve-3d; /* Preserve 3D for child elements */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back side when not facing */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.card-front {
+  flex-direction: column; /* Stack content vertically for the front */
+
+  color: black; /* Front text color */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Rotate back side */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background for back side */
+  color: white; /* Back text color */
+}
+
+.movie-card:hover .card-inner {
+  transform: rotateY(180deg); /* Flip the card */
+}
+.movie-card img {
+  width: 200px;
+  height: 300px;
+  border-radius: 0.3rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.movie-card img:hover {
+  transform: scale(1.1);
+}
+.movie-card h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+.movie-card h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.newsletter {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: red;
+}
+
+.newsletter .input-box {
+  border: 2px solid white;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.3rem;
+  background: white;
+  padding: 0 10px;
+}
+
+input {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  width: 280px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+footer .bg {
+  width: 50px;
+  height: 30px;
+  border-radius: 0.3rem;
+}
+
+.social-links {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-links i {
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  border: 2px solid red;
+  border-radius: 0.3rem;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.social-links i:hover {
+  color: orangered;
+}
+
+@media (max-width: 450px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    row-gap: 5px;
+  }
+
+  header img {
+    order: 0;
+    margin-right: 250px;
+  }
+
+  header nav {
+    order: 2;
+    grid-column: 1/-1;
+  }
+
+  header button {
+    order: 1;
+  }
+
+  .home-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-text {
+    top: 60%;
+  }
+
+  .movie-card {
+    width: 370px;
+  }
+
+  .movie-card img {
+    width: 320px;
+    height: 290px;
+  }
+}
