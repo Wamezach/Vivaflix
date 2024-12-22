@@ -4,7 +4,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "Vivaflix/Images/ANG_KAPITBAHAY.PNG",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/ANG_KAPITBAHAY.PNG",
   "url": "https://mega.nz/embed/Z4wUFB7Y#ufSzwuD76i6OOC1AivD8rHIS8hEZ3kvAGRJmc5C6fn4",
   "synopsis": "Thriller about an innocent college boy and the woman who would introduce him to manhood. Alex meets his new sultry neighbor, Rose, who awakens his sexual desire and gives him his first sexual experience only to learn a trap awaits him"
 },
@@ -13,7 +13,7 @@ const movies = [
   "duration": "110min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "Images/Pintor_at_Paraluman.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Pintor_at_Paraluman.PNG",
   "url": "https://mega.nz/embed/4oQXBaqJ#c-X0NMlZz4RYLI4E7U-nvrtLoeG_q-ilF8IKTe8fJzc",
   "synopsis": "An artist meets a mysterious woman who becomes his model for his nude artwork. He then fantasizes making love to her; however, he always remembers her number one rule - she can't be touched."
 },
