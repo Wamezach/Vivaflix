@@ -4,7 +4,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "Images/ANG_KAPITBAHAY.PNG",
+  "img": "Vivaflix/Images/ANG_KAPITBAHAY.PNG",
   "url": "https://mega.nz/embed/Z4wUFB7Y#ufSzwuD76i6OOC1AivD8rHIS8hEZ3kvAGRJmc5C6fn4",
   "synopsis": "Thriller about an innocent college boy and the woman who would introduce him to manhood. Alex meets his new sultry neighbor, Rose, who awakens his sexual desire and gives him his first sexual experience only to learn a trap awaits him"
 },
