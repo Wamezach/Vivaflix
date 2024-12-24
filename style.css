@@ -79,20 +79,27 @@ a:hover {
   color: gray;
 }
 
-.movie-iframe {
+.iframe-container {
+  position: relative;
   width: 100%; /* Full width */
-  height: 540px; /* Fixed height */
-  border: none;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0; /* Height will be set by padding */
+  overflow: hidden;
   border-radius: 0.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
 }
 
-.iframe-container {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+.movie-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Use the full height of the container */
+  border: none;
+  border-radius: 0.5rem; /* Optional: Keep for uniformity */
 }
+
 
 .search-container .btn {
   padding: 5px 10px;
@@ -127,47 +134,62 @@ a:hover {
   width: 100%;
   height: 30px;
 }
-
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px; /* Increased height for better alignment */
+  justify-content: space-between;  
+
+  height: 60px; /* Height for better alignment */
   border-radius: 0.5rem;
   background: none;
   position: absolute;
   top: 0;
   width: calc(100% - 40px);
-  margin: 10px 20px;
-  padding: 0 20px;
+  margin: 5px 5px;
+  padding: 0 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensure it stays above other elements */
 }
 
 header img {
   width: 60px;
   height: 35px;
   border-radius: 0.3rem; /* Logo corner rounding */
+margin: 5px 5px;
 }
-
+@media (max-width: 768px) {
+            header img {
+                display: none; /* Hide the logo on small screens */
+            }
+        }
 header nav {
   width: auto;
   margin-top: 0;
+
 }
 
+
+
+nav {
+    flex-grow: 1; /* Allow nav to take the available space */
+    display: flex; /* Use flexbox to align the nav items */
+    justify-content: center; /* Center nav items horizontally */
+}
 header nav ul {
   display: flex;
-  gap: 20px;
+  gap: 5 px;
   border: 2px solid #ccc;
   border-radius: 0.7rem;
   background-color: #f8f8f8;
-  padding: 10px;
+  padding: 5 px;
   list-style: none;
   align-items: center;
-  margin: 0;
+   margin: 0
+  justify-content: center; /* Center items horizontally */
 }
 
 header nav ul li {
-  flex-grow: 1;
+  flex-grow: 1; /* Allow items to grow equally */
   position: relative;
 }
 
@@ -185,6 +207,55 @@ header nav ul li a:hover {
   background-color: red;
   border-radius: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row; /* Keep items horizontally aligned */
+    height: auto; /* Allow height to adjust */
+    justify-content: space-between; /* Maintain space between items */
+    padding: 5px 15px; /* Reduce padding to decrease overall size */
+  }
+
+  header nav ul {
+    flex-direction: row; /* Keep the navigation links horizontally */
+    width: auto; /* Allow width to auto adjust based on content */
+    justify-content: center; /* Center navigation items */
+    overflow: hidden; /* Prevent overflow issues */
+    padding: 0; /* Remove additional padding */
+    margin: 0; /* Remove margin */
+    font-size: 12px; /* Further decrease font size for mobile */
+  }
+
+  header nav ul li {
+    flex-grow: 0; /* Prevent items from growing to fill space */
+    width: auto; /* Keep items from stretching */
+  }
+
+  header nav ul li a {
+    text-align: center; /* Center text for mobile links */
+    padding: 6px 10px; /* Further reduce padding */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0 5px; /* Reduce padding on very small screens */
+    margin: 5px 5px; /* Reduce margin on very small screens */
+  }
+
+  header img {
+    width: 40px; /* Adjust logo size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  header nav ul {
+    padding: 0; /* Ensure no padding for nav on smallest screens */
+  }
+}
+
+
+
 
 .home-text {
   position: absolute;
@@ -313,40 +384,41 @@ header nav ul li a:hover {
   margin-right: 8px;     
 }
 
-.movie-card img:hover + h1 + h2 + .synopsis {
-  display: block; 
-  opacity: 1; 
-}
+/// moviecard
 
+.movie-card img:hover + h1 + h2 + .synopsis { /* Show synopsis on image hover */
+  display: block; /* Allow the block to render */
+  opacity: 1; /* Make it fully visible */
+}
 .movie-cards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
   gap: 10px;
   width: 100%;
-  overflow: hidden;
-}
 
+overflow: hidden; /* Ensures synopsis doesn't leak out of card */z
+}
 .movie-card {
-  width: 100%;
-  max-width: 250px; /* Limiting maximum size */
+  width: 250px;
   height: 410px;
   border: 2px solid white;
-  border-radius: 0.3rem; 
+  border-radius: 0.3rem; /* Fixed typo; should be 'rem' not 'rem' */
   background: rgba(0, 0, 0, 0.274);
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 1000px; 
+  perspective: 1000px; /* Adds perspective to the container for 3D effect */
 }
 
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s; 
-  transform-style: preserve-3d; 
+  transition: transform 0.6s; /* Duration of flip effect */
+  transform-style: preserve-3d; /* Preserve 3D for child elements */
 }
 
 .card-front,
@@ -354,50 +426,90 @@ header nav ul li a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; 
+  backface-visibility: hidden; /* Hide back side when not facing */
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
 .card-front {
-  flex-direction: column; 
-  color: black; 
+  flex-direction: column; /* Stack content vertically for the front */
+
+  color: black; /* Front text color */
 }
 
 .card-back {
-  transform: rotateY(180deg); 
-  background-color: rgba(0, 0, 0, 0.8); 
-  color: white; 
+  transform: rotateY(180deg); /* Rotate back side */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background for back side */
+  color: white; /* Back text color */
 }
 
 .movie-card:hover .card-inner {
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg); /* Flip the card */
 }
-
 .movie-card img {
-  width: 80%; /* Set to 80% to adapt to card size */
-  height: auto; /* Keep aspect ratio */
+  width: 100%;                /* Expanded to 100% to fill the card width */
+  height: auto;              /* Maintain the aspect ratio */
+  max-width: 200px;          /* Maximum width to control size on larger screens */
+  max-height: 300px;         /* Maximum height to prevent overflow */
   border-radius: 0.3rem;
-  transition: 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out; /* Specify the property being transitioned */
   cursor: pointer;
 }
 
 .movie-card img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);    /* Scale image down slightly for a nice hover effect */
 }
 
 .movie-card h1 {
-  font-size: 1.2rem;
+  font-size: 1.2rem;        /* Font size suitable for larger screens */
   font-weight: 600;
   color: white;
+  margin: 0;                /* Remove margin for better control over spacing */
+  text-align: center;       /* Center align the text */
 }
 
 .movie-card h2 {
-  font-size: 1rem;
+  font-size: 1rem;          /* Font size suitable for larger screens */
   font-weight: 500;
   color: white;
+  margin: 0;                /* Remove margin for consistency */
+  text-align: center;       /* Center align the text */
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .movie-card img {
+    max-width: 180px;       /* Adjust max-width for tablet view */
+    max-height: 250px;      /* Adjust max-height for tablet view */
+  }
+
+  .movie-card h1 {
+    font-size: 1rem;        /* Adjust font size for smaller screens */
+  }
+
+  .movie-card h2 {
+    font-size: 0.9rem;      /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card img {
+    max-width: 150px;       /* Further adjust max-width for mobile devices */
+    max-height: 200px;      /* Further adjust max-height for mobile devices */
+  }
+
+  .movie-card h1 {
+    font-size: 0.9rem;      /* Further adjust font size */
+  }
+
+  .movie-card h2 {
+    font-size: 0.8rem;      /* Further adjust font size */
+  }
+}
+
+
+////
 
 .newsletter {
   width: 100%;
