@@ -22,7 +22,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
  "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/BackRider.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/BackRider.PNG",
   "url": "https://mega.nz/embed/J0wGERKR#cZKGlbYr-lwDtH0Y9zP5nwxdRrOuN-IXAr-jBiSlTVI",
   "synopsis": "Faith is a private massage therapist. After a nasty break up with her gaming and crypto addicted boyfriend, she finds comfort in her rich, and seemingly kind client, but finds herself in a passionate and perilous situation."
 },
@@ -31,7 +31,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
  "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Baligtaran.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Baligtaran.PNG",
   "url": "https://mega.nz/embed/Jwx0FKZQ#m__hQPVqh7P4_9Vmh-qFkSS8SlOHvJ8hBl-uM_Li0yA",
   "synopsis": "Kat a beautiful DJ who immediately catches the eye of pansexual woman Denise. But while Kat falls for Denise, she's just one of the many partners of Denise. Will Kat learn to be okay with their set-up or will Denise change her way for Kat?"
 },
@@ -40,7 +40,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
  "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Balinsasayaw.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Balinsasayaw.PNG",
   "url": "https://mega.nz/embed/dgoHhCoT#YZII_YkfE-c05_rYFYFhfzAHdg6qQZcZgTa91ynRjvE",
   "synopsis": "A rich woman marries a charming womanizer who conspires with his wife's best friend. When all the revelations are exposed, the tables suddenly turn."
 },
@@ -49,7 +49,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
  "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Bedspacer.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Bedspacer.PNG",
   "url": "https://mega.nz/embed/BgYzQCrD#DT1oyja2CSSmE8RFgaOQZaWBm2XOJm9qsOXFPl6MPGI",
   "synopsis": "Janice's steamy obsession to imitate Lexi propels them to campus stardom. But dark secrets blur the lines between authenticity and seductive deception."
 },
@@ -58,7 +58,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Boss_Maam.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Boss_Maam.PNG",
   "url": "https://mega.nz/embed/Yo4FCB6I#aOQ5k2H98wmJPIWrNileOvVbONRptvxD4u48etZMdT0",
   "synopsis": "When a terror female boss was blackmailed by her assistant, she has no choice but to obey and play with her."
 },
@@ -67,7 +67,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "Images/Butas.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Butas.PNG",
   "url": "https://mega.nz/embed/F9ZzhAga#E9bzSEt2kNWTKxuCigokWU86cLRxjjRPIMQTPNRx0qQ",
   "synopsis": "Witness how lives of four young people who have various sexual quirks and inhibitions intertwine as they live together in a snug boarding house."
 },
@@ -76,7 +76,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Cheaters.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Cheaters.PNG",
   "url": "https://mega.nz/embed/40ZVSJTZ#R0h868ZldzTEvpxiYR6pw_Y0AVqo0CZioG_SfbyKshQ",
   "synopsis": "Two strangers meet and have strong sexual connection with each other, only to find out that they're both in relationship with others. How can they sustain a relationship that started with sex and cheating?"
 },
@@ -85,7 +85,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Cita.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Cita.PNG",
   "url": "https://mega.nz/embed/s151FCID#cCz2Glt2xiWlwolIuRC2zfC1oQBfBZh_F9ClY7z3Az0",
   "synopsis": "A sexually charged story about a young woman who secretly sleeps with her husband's son. The two form an alliance to kill her husband but fate has other plans for Cita."
 },
@@ -94,7 +94,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/DaddySitter.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/DaddySitter.PNG",
   "url": "https://mega.nz/embed/VoJiFYZC#5iYpsuo0k0FiUJkEO-TAe73GjiXRc90BbkQVuaI8K4s",
   "synopsis": "Mara, a student taking on an unusual ''daddysitter'' job. As she grows close to her wealthy, ill client, his estranged son's return complicates everything."
 },
@@ -103,7 +103,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Dayo.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Dayo.PNG",
   "url": "https://mega.nz/embed/M45RiBSD#Dvs7863KYmKPoAH4BvsgIHL-4ypt1OAwwpPm81qt-dU",
   "synopsis": "A club dancer leaves everything and starts a new life in a place where nobody knows her. But it seems that desire and temptation follow her wherever she goes."
 },
@@ -112,7 +112,7 @@ const movies = [
   "duration": "120min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Dirty_Icecream.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Dirty_Icecream.PNG",
   "url": "https://mega.nz/embed/qRF3DZRT#FqSDGJHeRF0Vn_O0r7hkQl2rCPTyyb-aBaAEfmLQjsI",
   "synopsis": "Villagers are experiencing an extreme heat. Two hot ice cream vendors come to the village to sell ice cream. With electricity out, the women of the subdivision take turns having the vendors satisfy their every needs."
 },
@@ -121,7 +121,7 @@ const movies = [
   "duration": "100min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Donselya.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Donselya.PNG",
   "url": "https://mega.nz/embed/TJd3HaiK#01HDci7cx3STFhMVXX19IVSlGcDu5kTYMpkpLEScxB0",
   "synopsis": "An 18-year-old virgin, Iris, enters a marriage of convenience with wealthy widower Joaquin for financial gain. However, the discovery of her deceit regarding her purity leads to a disastrous honeymoon."
 },
@@ -130,7 +130,7 @@ const movies = [
   "duration": "100min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Eks.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Eks.PNG",
   "url": "https://mega.nz/embed/KRF0laCA#rZcIFGNlL2S2k763yTkRep78r3m94mGmeDZfvF9B4zg",
   "synopsis": "Three compelling stories in one erotic experience. Yen Durano plays three different women in three titillating stories."
 },
@@ -139,7 +139,7 @@ const movies = [
   "duration": "119min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Hiraya.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Hiraya.PNG",
   "url": "https://mega.nz/embed/bFE0GBpD#Gu8y3ukYNGwWwNejujyokv1SMeO3-O6I9zePMfRWhuc",
   "synopsis": "Hiraya is a mysterious woman found unconscious in a river. She wakes up not remembering anything and is unable to speak. The townspeople take advantage of Hiraya, but it seems that those who do, always end up in misfortune."
 },
@@ -148,7 +148,7 @@ const movies = [
   "duration": "119min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Huwad.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Huwad.PNG",
   "url": "https://mega.nz/embed/iUNyCJ7S#Gn4tEqxeCAVs4ISUk45lY0cQurwMdo9_XXFsWJ26Ado",
   "synopsis": "When Romina learns that her husband has been cheating on her, she turns to the town's folk healer for help and obtains a love potion. But it seems the potion is working on everyone except her husband."
 },
@@ -166,7 +166,7 @@ const movies = [
   "duration": "48min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kasalo.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kasalo.PNG",
   "url": "https://mega.nz/embed/jQdhwSbT#YnPdUPy9_JfU37gg9i1U3sQOMrSQ5YCs9vvipRXWlfk",
   "synopsis": "Two strangers meet through a ride-sharing app and find themselves sharing more than what's expected. Both having problems with their respective marital lives, they find comfort in each other's company."
 },
@@ -175,7 +175,7 @@ const movies = [
   "duration": "126min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kabit.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kabit.PNG",
   "url": "https://mega.nz/embed/fRcRCJKD#ys9DsLx3zbNUL3DvqKFttxl91pWMlwUFAdfNRamJaQg",
   "synopsis": "Laura accepts the role in this play to rebel against her mother. The director pushes her to bring out her vulnerability and anger, hoping they will show these emotions on stage."
 },
@@ -185,7 +185,7 @@ const movies = [
   "duration": "124min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kabitan.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kabitan.PNG",
   "url": "https://mega.nz/embed/fFNxFICA#XMrx5_3NdTE2Pupq7_c-Y6aQPLdQrea8t-E_ssaVVus",
   "synopsis": "Alice, a depressed mistress, forms a deep emotional and sexual bond with Mika, her neighbor, who is also a mistress. Then, the inevitable happens, they fall for each other."
 },
@@ -194,7 +194,7 @@ const movies = [
   "duration": "91min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Karinyo_Brutal.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Karinyo_Brutal.PNG",
   "url": "https://mega.nz/embed/jN8wBLiT#Lq3TUG9slMPz1bWz8bUIJKHmJNZ9UjHYjxqeDZyj0zg",
   "synopsis": "When a battered mistress meets her neighbor, she knows he will be her perfect escape plan. But things turn chaotic when their plan backfires."
 },
@@ -203,7 +203,7 @@ const movies = [
   "duration": "90min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kaskasero.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kaskasero.PNG",
   "url": "https://mega.nz/embed/nNkykRpC#q9PPoFAfsJjjxVU2DwDlsiLgx4OR1BP6jpRgPzJ1nGA",
   "synopsis": "Talented mechanic Migs gets drawn into illegal street racing by a charming customer, Gabbi. As he delves deeper, learning Gabbi's troubled past, Migs' reckless choices jeopardize their bond."
 },
@@ -212,7 +212,7 @@ const movies = [
   "duration": "49min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kalikot.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kalikot.PNG",
   "url": "https://mega.nz/embed/XIEQhAZC#zW4fOvuM43DnGfAWVSIwaHieX82_yjMDlo2KRN7Hb8c",
   "synopsis": "al, a professor, moves near an auto shop. Arnel, a repairman, is attracted to her after she brings her car for repair. Their relationship develops, but they face challenges navigating it while Arnel works at the shop."
 },
