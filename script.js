@@ -157,7 +157,7 @@ const movies = [
   "duration": "119min",
   "genre": "Romance",
   "quality": "HD",
-  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Init.png",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Init.PNG",
   "url": "https://mega.nz/embed/3UVXHRZQ#W0PholKh0dwEu0BppfYSar3jD_S_S1SOT7fA1cfth5E",
   "synopsis": "When a young barrio lass moves in to the city to study, she lives in a boarding house with other college students. Unknown to them, behind her shy and timid personality is a woman with insatiable hunger for sex."
 },
