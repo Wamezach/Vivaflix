@@ -1,84 +1,70 @@
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Movies | VivaFlix</title>
-
-  </head>
-  <body>
+</head>
+<body>
 <section class="home">
- 
-      <header>
+    <header>
         <img src="logo.png" alt="" />
         <nav>
-
-
-          <ul>
-
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#movies">Movies</a></li>
-            <li><a href="#coming">Coming</a></li>
-            <li><a href="#newsletter">NewsLetter</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#newsletter">NewsLetter</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
         </nav>
-
-
-      </header>
-   
-    
-    </section>
-    <div class="iframe-container">
+    </header>
+</section>
+<div class="iframe-container">
     <iframe class="movie-iframe" src="https://mega.nz/embed/Z4wUFB7Y#ufSzwuD76i6OOC1AivD8rHIS8hEZ3kvAGRJmc5C6fn4" title="Ang Kaptibahay Trailer" allow="autoplay; allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <div class="search-container">
-          <input type="text" placeholder="Search Movies..." class="search-box" />
-          <button class="btn" onclick="searchMovies()">Search</button>
-        </div>
-    <section class="movies" id="movies">
-
-      <div class="heading">
-
-
+    <input type="text" placeholder="Search Movies..." class="search-box" />
+    <button class="btn" onclick="searchMovies()">Search</button>
+</div>
+<section class="movies" id="movies">
+    <div class="heading">
         <h1>Movies</h1>
-      </div>
-      <div id="movie-container" class="movie-cards">
+    </div>
+    <div id="movie-container" class="movie-cards">
         <!-- Movie cards will be generated here -->
-      </div>
-      <div class="pagination">
+    </div>
+    <div class="pagination">
         <button id="prev-btn" class="btn">Prev</button>
         <span id="page-info">Page 1</span>
         <button id="next-btn" class="btn">Next</button>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="newsletter" id="newsletter">
-      <h1>Subscribe To NewsLetter</h1>
-      <div class="input-box">
+<section class="newsletter" id="newsletter">
+    <h1>Subscribe To NewsLetter</h1>
+    <div class="input-box">
         <input type="text" name="" id="" placeholder="Enter Email" />
-        <input
-          type="button"
-          value="Subscribe"
-          class="btn"
-          placeholder="Subscribe"
-        />
-      </div>
-    </section>
+        <input type="button" value="Subscribe" class="btn" placeholder="Subscribe" />
+    </div>
+</section>
 
-    <footer>
-      <img class="bg" src="logo.png" alt="" />
-      <div class="social-links">
+<section class="about" id="about">
+    <h1>About This Site</h1>
+    <p>This site was created by Warren, who is passionate about making movie streaming accessible to everyone. 🎬</p>
+    <p>Warren designed and developed VivaFlix to provide users with a seamless experience in exploring and enjoying their favorite films. With a focus on user-friendly navigation and diverse content, VivaFlix aims to be your go-to streaming platform. 🙌</p>
+</section>
+
+<footer>
+    <img class="bg" src="logo.png" alt="" />
+    <div class="social-links">
         <i class="bx bxl-facebook"></i>
         <i class="bx bxl-instagram"></i>
         <i class="bx bxl-linkedin"></i>
         <i class="bx bxl-youtube"></i>
-      </div>
-    </footer>
+    </div>
+</footer>
 
-<script  src="script.js"></script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
