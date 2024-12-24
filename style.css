@@ -658,7 +658,7 @@ footer .bg {
 .about {
     background-color: #000; /* Black background */
     color: #fff; /* White text */
-    padding: 40px 20px; /* Padding around the section */
+    padding: 10px 10px; /* Padding around the section */
     text-align: center; /* Center align the text */
 }
 
