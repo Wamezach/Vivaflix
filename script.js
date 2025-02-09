@@ -297,11 +297,7 @@ function searchMovies() {
 }
 
 
-// Handling the click event on the card
-function handleCardClick(event) {
-    const movieUrl = event.currentTarget.querySelector('.movie-url').innerText; // Get the hidden URL
-    loadMovie(movieUrl); // Load the movie in the iframe
-}
+
 
 // Duration format
 
@@ -409,7 +405,6 @@ document.getElementById('next-btn').addEventListener('click', () => {
 
 // Initial display
 displayPaginatedMovies(currentPage);
-
 function loadMovie(movieUrl) {
     // Change the iframe source
     document.querySelector('.movie-iframe').src = movieUrl;
@@ -417,14 +412,11 @@ function loadMovie(movieUrl) {
     // Scroll to the top of the iframe container
     document.querySelector('.iframe-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-
-// Play button event listener
-document.querySelector('.play-button').addEventListener('click', function() {
-    var movieUrl = 'YOUR_MOVIE_URL_HERE'; // You can replace this with the actual movie URL from ${movie.url}
-
-    // Load the movie in the iframe and scroll to the top
-    loadMovie(movieUrl);
+document.addEventListener('click', function(event) {
+    const playButton = event.target.closest('.play-button');
+    if (playButton) {
+        const movieUrl = playButton.parentElement.querySelector('.movie-url').innerText; // Get the hidden URL from the parent of play-button
+        loadMovie(movieUrl); // Load the movie in the iframe
+    }
 });
-
-
 
