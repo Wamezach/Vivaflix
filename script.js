@@ -260,7 +260,7 @@ const movies = [
     { title: "Veil2", duration: "120 Min", genre: "Action", img: "m1.jpg", url: "venom.html" } // Removed duplicates
 ];
 
-const moviesPerPage = 10;
+const moviesPerPage = 6;
 let currentPage = 1;
 
 function searchMovies() {
