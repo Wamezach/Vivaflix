@@ -295,11 +295,7 @@ function searchMovies() {
     location.reload(); // Reload the page if the query is empty
   }
 }
-function loadMovie(url) {
-    const iframe = document.querySelector('.movie-iframe'); // Select iframe by class
-    iframe.src = url ? `${url}?autoplay=1` : 'about:blank'; // Load the URL with autoplay or fallback to a blank page
-    iframe.scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the iframe
-}
+
 
 // Handling the click event on the card
 function handleCardClick(event) {
@@ -330,10 +326,13 @@ function displayMovies(moviesToDisplay) {
                             <h1>${movie.title}</h1>
 
                         </div>
-                        <div class="card-back">
-                            <div class="synopsis">${movie.synopsis}</div>
-                            <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
-                        </div>
+
+<div class="card-back" style="position: relative; text-align: center;">
+    <div class="synopsis">${movie.synopsis}</div>
+    <button class="play-button" style="color: white; background-color: red; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
+  <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
+    <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
+</div>
                     </div>
                 </div>
             `;
@@ -371,9 +370,14 @@ function displayPaginatedMovies(page) {
   
                             <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
                         </div>
-                        <div class="card-back">
-                            <div class="synopsis">${movie.synopsis}</div>
-                        </div>
+                     <div class="card-back" style="position: relative; text-align: center;">
+    <div class="synopsis">${movie.synopsis}</div>
+    <button class="play-button" style="color: white; background-color: red; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
+
+    <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
+</div>
+
+
                     </div>
                 </div>
             `;
@@ -405,3 +409,22 @@ document.getElementById('next-btn').addEventListener('click', () => {
 
 // Initial display
 displayPaginatedMovies(currentPage);
+
+function loadMovie(movieUrl) {
+    // Change the iframe source
+    document.querySelector('.movie-iframe').src = movieUrl;
+
+    // Scroll to the top of the iframe container
+    document.querySelector('.iframe-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Play button event listener
+document.querySelector('.play-button').addEventListener('click', function() {
+    var movieUrl = 'YOUR_MOVIE_URL_HERE'; // You can replace this with the actual movie URL from ${movie.url}
+
+    // Load the movie in the iframe and scroll to the top
+    loadMovie(movieUrl);
+});
+
+
+
