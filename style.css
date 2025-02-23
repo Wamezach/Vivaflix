@@ -2,8 +2,8 @@
     display: flex; /* Use flexbox for layout */
     width: 100%;
 }
-
-.sidebar-left, .sidebar-right {
+.sidebar-left,
+.sidebar-right {
     width: 200px; /* Set width for sidebars */
     background: #333;
     color: white;
@@ -11,13 +11,33 @@
     height: auto; /* Allow height to adjust */
 }
 
+/* Optional: visual separation */
 .sidebar-left {
-    border-right: 2px solid violet; /* Optional: visual separation */
+    border-right: 2px solid violet; 
 }
 
 .sidebar-right {
-    border-left: 2px solid violet; /* Optional: visual separation */
+    border-left: 2px solid violet; 
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar-left,
+    .sidebar-right {
+        width: 100%; /* Full width on smaller screens */
+        border: none; /* Remove borders on smaller screens for a cleaner look */
+        margin-bottom: 10px; /* Add space between stacked sidebars */
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar-left,
+    .sidebar-right {
+        display: inline-block; /* Display side by side on larger screens */
+        vertical-align: top; /* Align them to the top */
+    }
+}
+
 
 .main-content {
     flex-grow: 1; /* Allow main content to fill available space */
