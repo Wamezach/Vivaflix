@@ -260,41 +260,60 @@ const movies = [
     { title: "Veil2", duration: "120 Min", genre: "Action", img: "m1.jpg", url: "venom.html" } // Removed duplicates
 ];
 
-const moviesPerPage = 5;
+const moviesPerPage = 8;
 let currentPage = 1;
 
 function searchMovies() {
-  const query = document.querySelector('.search-box').value.toLowerCase().trim();
+  const searchBox = document.querySelector('.search-box');
+  const query = searchBox.value.toLowerCase().trim();
   const movieContainer = document.getElementById('movie-container');
 
   // Clear previous results
   movieContainer.innerHTML = '';
 
-  // Perform search only if there is a non-empty query
-  if (query) {
-    const loadingMessage = document.createElement('p');
-    loadingMessage.textContent = 'Searching...';
-    movieContainer.appendChild(loadingMessage);
-
-    // Filter movies based on the query
-    const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(query));
-
-    // Simulate a delay for loading feedback
+  // Check if the search box is empty
+  if (!query) {
+    searchBox.placeholder = 'Text box is empty!'; // Change placeholder
     setTimeout(() => {
-      movieContainer.innerHTML = ''; // Clear loading message
-
-      if (filteredMovies.length > 0) {
-        displayMovies(filteredMovies); // Display filtered movies
-      } else {
-        // No results found - reload the page
-        location.reload(); // Reload the page if no movies found
-      }
-    }, 500);
-  } else {
-    // If the query is empty, reload the page
-    location.reload(); // Reload the page if the query is empty
+      location.reload(); // Reload the page after 3 seconds
+    }, 3000); // 3000 milliseconds = 3 seconds
+    return; // Exit the function early
   }
+
+  searchBox.placeholder = 'Searching movies...'; // Change placeholder to indicate search is in progress
+  const loadingMessage = document.createElement('p');
+  loadingMessage.textContent = 'Searching...';
+  movieContainer.appendChild(loadingMessage);
+
+  // Filter movies based on the query
+  const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(query));
+
+  // Simulate a delay for loading feedback
+  setTimeout(() => {
+    movieContainer.innerHTML = ''; // Clear loading message
+    searchBox.placeholder = 'Search Movies...'; // Reset placeholder
+
+    if (filteredMovies.length > 0) {
+      displayMovies(filteredMovies); // Display filtered movies
+    } else {
+      // No results found - change placeholder to indicate no results
+      searchBox.placeholder = 'Movies not found...'; 
+      const noResultsMessage = document.createElement('p');
+      noResultsMessage.textContent = 'Search can\'t be found.';
+      movieContainer.appendChild(noResultsMessage);
+      
+      // Reload the page after 3 seconds if no movies found
+      setTimeout(() => {
+        location.reload(); // Reload the page after 3 seconds
+      }, 3000); // 3000 milliseconds = 3 seconds
+    }
+
+    // Clear the input field after processing the search
+    searchBox.value = '';
+  }, 500);
 }
+
+
 
 
 
@@ -325,7 +344,7 @@ function displayMovies(moviesToDisplay) {
 
 <div class="card-back" style="position: relative; text-align: center;">
     <div class="synopsis">${movie.synopsis}</div>
-    <button class="play-button" style="color: white; background-color: red; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
+    <button class="play-button" style="color: white; background-color: violet; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
   <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
     <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
 </div>
@@ -368,7 +387,7 @@ function displayPaginatedMovies(page) {
                         </div>
                      <div class="card-back" style="position: relative; text-align: center;">
     <div class="synopsis">${movie.synopsis}</div>
-    <button class="play-button" style="color: white; background-color: red; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
+    <button class="play-button" style="color: white; background-color: violet; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
 
     <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
 </div>
