@@ -1,3 +1,31 @@
+.container {
+    display: flex; /* Use flexbox for layout */
+    width: 100%;
+}
+
+.sidebar-left, .sidebar-right {
+    width: 200px; /* Set width for sidebars */
+    background: #4B0082; /* Dark violet background */
+    color: white;
+    padding: 15px;
+    height: auto; /* Allow height to adjust */
+}
+
+.sidebar-left {
+    border-right: 2px solid violet; /* Optional: visual separation */
+}
+
+.sidebar-right {
+    border-left: 2px solid violet; /* Optional: visual separation */
+}
+
+
+.main-content {
+    flex-grow: 1; /* Allow main content to fill available space */
+    padding: 10px;
+    background-color: #000; /* Example background, adjust as needed */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,19 +61,14 @@ a {
 }
 
 a:hover {
-  color: orangered;
+  color: violet;
 }
 
 .button {
   cursor: pointer;
 }
 
-.search-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
+
 
 .sidebar {
   width: 200px;
@@ -68,19 +91,6 @@ a:hover {
   color: white;
 }
 
-.search-box {
-  padding: 5px;
-  font-size: 1rem;
-  border: 2px solid red; /* Match your theme */
-  border-radius: 0.3rem;
-  background-color: white; /* Change as needed */
-  color: black; /* Change as needed */
-  margin-right: 10px;
-}
-
-.search-box::placeholder {
-  color: gray;
-}
 
 .iframe-container {
   position: relative;
@@ -104,10 +114,6 @@ a:hover {
 }
 
 
-.search-container .btn {
-  padding: 5px 10px;
-  font-size: 1rem;
-}
 
 .pagination {
   display: flex;
@@ -125,7 +131,7 @@ a:hover {
   height: 30px;
   font-size: 1rem;
   font-weight: 600;
-  background: orangered;
+  background: violet;
   border: 2px solid white;
   border-radius: 0.3rem;
   cursor: pointer;
@@ -207,7 +213,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
   color: white;
-  background-color: red;
+  background-color: violet;
   border-radius: 0.5rem;
 }
 
@@ -295,7 +301,7 @@ header nav ul li a:hover {
   margin-right: 70px;
   cursor: pointer;
   border: 2px solid white;
-  background: orangered;
+  background: violet;
   animation: animate 2s linear infinite;
 }
 
@@ -319,7 +325,7 @@ header nav ul li a:hover {
 
 .vertical-line {
   width: 2px;
-  background-color: red;
+  background-color: violet;
   height: 100px;
   margin: 0 10px;
 }
@@ -343,7 +349,7 @@ header nav ul li a:hover {
 
 .release {
   max-width: 600px; 
-  color: red; 
+  color: violet; 
 }
 
 .movies {
@@ -364,9 +370,8 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 3px solid;
-  border-left: 3px solid;
-  color: red;
+
+  color: white;
 }
 
 .quality-duration-genre {
@@ -378,7 +383,7 @@ header nav ul li a:hover {
 }
 
 .quality, .genre, .duration {
-  background-color: red; 
+  background-color: violet; 
   color: #fff;           
   padding: 4px 10px;     
   border-radius: 4px;    
@@ -534,33 +539,81 @@ width: auto;         /* Maintain aspect ratio */
 .newsletter h1 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: red;
+  color: violet;
  text-align: center; /* Center text */
 }
+
+/* Search Container */
+.search-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack inputs vertically */
+    align-items: center; /* Center the items horizontally */
+    justify-content: center; /* Center the items vertically */
+    margin-top: 20px;
+    width: 50%; /* Set a fixed width for the search container */
+    margin: 0 auto; /* Center the container */
+}
+
+.search-box {
+    padding: 10px; /* Padding for better touch targets */
+    font-size: 1rem;
+    border: 2px solid violet; /* Tomato color for input border */
+    border-radius: 0.3rem; /* Rounded corners */
+    background-color: white; /* Input background */
+    color: black; /* Text color for input */
+    width: 100%; /* Full width of the parent container */
+    margin-bottom: 10px; /* Space below the input box */
+}
+
+.search-box::placeholder {
+    color: gray; /* Placeholder color */
+}
+
+.search-container .btn {
+    padding: 10px; /* Padding inside the button */
+    font-size: 1rem;
+    background: violet; /* Tomato background for button */
+    border: 2px solid white; /* Button border */
+    border-radius: 0.3rem; /* Rounded corners for button */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.search-container .btn:hover {
+    background-color: violet; /* Darker shade on hover */
+}
+
+/* Input Box */
 .input-box {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack inputs vertically */
-  gap: 10px; /* Space between inputs */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 10px; /* Space between inputs */
+    align-items: center; /* Center the items horizontally */
+    justify-content: center; /* Center the items vertically */
+    margin: 0 auto; /* Center the input box in its container */
+    width: 50%; /* Set a fixed width for the input box */
 }
 
-input[type="text"] {
-  padding: 10px; /* Padding inside the input */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 4px; /* Rounded corners */
-  width: 100%; /* Full width */
+.input-box input[type="text"] {
+    padding: 10px; /* Padding inside the input */
+    border: 2px solid violet; /* Tomato color for input border */
+    border-radius: 0.3rem; /* Rounded corners */
+    width: 100%; /* Full width of the parent container */
 }
 
-.btn {
-  padding: 10px; /* Padding inside the button */
-  border: none; /* No border */
-  background-color: red; /* Button color set to red */
-  color: white; /* Text color */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
+.input-box .btn {
+    padding: 10px; /* Padding inside the button */
+    border: none; /* No border */
+    background-color: violet; /* Button color set to Tomato */
+    color: white; /* Text color */
+    border-radius: 0.3rem; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth background transition */
 }
 
-.btn:hover {
- background-color: darkred; /* Darken button on hover */
+.input-box .btn:hover {
+    background-color: violet; /* Darken button on hover */
 }
 
 footer {
@@ -591,9 +644,9 @@ footer .bg {
   width: 30px;
   height: 30px;
   font-size: 1.2rem;
-  border: 2px solid red;
+  border: 2px solid violet;
   border-radius: 0.3rem;
-  background: red;
+  background: violet;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -601,7 +654,7 @@ footer .bg {
 }
 
 .social-links i:hover {
-  color: orangered;
+  color: violet;
 }
 
 @media (max-width: 768px) {
@@ -677,7 +730,7 @@ footer .bg {
 .about h1 {
     font-size: 1.3rem;
   font-weight: 600;
-  color: red;
+  color: violet;
  text-align: center; /* Center text */
 }
 
@@ -696,4 +749,3 @@ footer .bg {
     height: auto; /* Maintain aspect ratio */
     margin-top: 20px; /* Space above image */
 }
-
