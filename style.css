@@ -5,7 +5,7 @@
 
 .sidebar-left, .sidebar-right {
     width: 200px; /* Set width for sidebars */
-    background: #4B0082; /* Dark violet background */
+    background: #333;
     color: white;
     padding: 15px;
     height: auto; /* Allow height to adjust */
@@ -18,7 +18,6 @@
 .sidebar-right {
     border-left: 2px solid violet; /* Optional: visual separation */
 }
-
 
 .main-content {
     flex-grow: 1; /* Allow main content to fill available space */
@@ -370,8 +369,9 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: white;
+  border-right: 3px solid;
+  border-left: 3px solid;
+  color: violet;
 }
 
 .quality-duration-genre {
@@ -749,3 +749,82 @@ footer .bg {
     height: auto; /* Maintain aspect ratio */
     margin-top: 20px; /* Space above image */
 }
+
+.sidebar-left,
+.sidebar-right,
+.sidebar {
+    width: 200px;
+    background-color: #663399; /* Updated to a violet shade */
+}
+
+.sidebar-left {
+    border-right: 2px solid #8A2BE2; /* Adjusted to a darker violet for separation */
+}
+
+.sidebar-right {
+    border-left: 2px solid #8A2BE2; /* Adjusted to a darker violet for separation */
+}
+
+.sidebar ul li a,
+a {
+    color: white;
+}
+
+.sidebar ul li a:hover,
+a:hover {
+    color: #8A2BE2; /* Dark violet color on hover */
+}
+
+.btn {
+    background: #8A2BE2; /* Violet background */
+    border: 2px solid #663399; /* Darker violet border */
+}
+
+.btn:hover {
+    background: #663399; /* Dark violet background on hover */
+}
+
+.header nav ul li a:hover {
+    color: white;
+    background-color: #8A2BE2; /* Dark violet background on hover */
+}
+
+.movie-card img {
+    border: 2px solid #8A2BE2; /* Violet border for images */
+}
+
+.movie-card img:hover {
+    border: 2px solid #4B0082; /* Dark violet border on hover */
+}
+
+
+
+.newsletter h1 {
+    color: #8A2BE2; /* Dark violet heading color */
+}
+
+.search-box, .input-box input[type="text"] {
+    border: 2px solid #8A2BE2; /* Violet border for text inputs */
+}
+
+.search-container .btn, .input-box .btn {
+    background: #8A2BE2;
+    border: 2px solid #663399;
+}
+
+.search-container .btn:hover, .input-box .btn:hover {
+    background-color: #663399;
+}
+
+footer .bg {
+    background: #663399; /* Violet background for footer element */
+}
+
+.social-links i {
+    border: 2px solid #8A2BE2; /* Violet border for social icons */
+}
+
+.social-links i:hover {
+    color: #8A2BE2; /* Dark violet color on icon hover */
+}
+
