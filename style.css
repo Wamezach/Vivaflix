@@ -21,22 +21,18 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-    .sidebar-left,
+/* CSS for hiding sidebars on small devices */
+@media (max-width: 768px) { /* You can adjust the breakpoint as needed */
+    .sidebar-left, 
     .sidebar-right {
-        width: 100%; /* Full width on smaller screens */
-        border: none; /* Remove borders on smaller screens for a cleaner look */
-        margin-bottom: 10px; /* Add space between stacked sidebars */
+        display: none; /* Hide the sidebars */
+    }
+    
+    .main-content {
+        grid-template-columns: 1fr; /* Adjust main content layout */
     }
 }
 
-@media (min-width: 769px) {
-    .sidebar-left,
-    .sidebar-right {
-        display: inline-block; /* Display side by side on larger screens */
-        vertical-align: top; /* Align them to the top */
-    }
-}
 
 
 .main-content {
