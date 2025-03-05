@@ -1,7 +1,4 @@
-.movie-list {
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
+
 
 .movie-list.fade-out {
     opacity: 0;
