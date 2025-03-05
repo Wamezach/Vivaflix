@@ -473,15 +473,27 @@ function displayPaginatedMovies(page) {
 // Pagination button event listeners
 document.getElementById('prev-btn').addEventListener('click', () => {
     if (currentPage > 1) {
-        currentPage--;
-        displayPaginatedMovies(currentPage);
+        const movieList = document.querySelector('.movie-list');
+        movieList.classList.add('fade-out');
+
+        setTimeout(() => {
+            currentPage--;
+            displayPaginatedMovies(currentPage);
+            movieList.classList.remove('fade-out');
+        }, 500); // Duration should match the CSS transition duration
     }
 });
 
 document.getElementById('next-btn').addEventListener('click', () => {
     if (currentPage * moviesPerPage < movies.length) {
-        currentPage++;
-        displayPaginatedMovies(currentPage);
+        const movieList = document.querySelector('.movie-list');
+        movieList.classList.add('fade-out');
+
+        setTimeout(() => {
+            currentPage++;
+            displayPaginatedMovies(currentPage);
+            movieList.classList.remove('fade-out');
+        }, 500); // Duration should match the CSS transition duration
     }
 });
 
