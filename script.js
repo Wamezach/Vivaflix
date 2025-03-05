@@ -326,91 +326,85 @@ const movies = [
 const moviesPerPage = 8;
 let currentPage = 1;
 
+// Example movie data
+const movies = [
+    {
+        title: 'Movie 1',
+        quality: 'HD',
+        duration: '2h 20m',
+        genre: 'Action',
+        img: 'path/to/image1.jpg',
+        synopsis: 'Synopsis for Movie 1.',
+        url: 'http://example.com/movie1'
+    },
+    // Add more movie objects here...
+];
+
 function searchMovies() {
-  const searchBox = document.querySelector('.search-box');
-  const query = searchBox.value.toLowerCase().trim();
-  const movieContainer = document.getElementById('movie-container');
+    const searchBox = document.querySelector('.search-box');
+    const query = searchBox.value.toLowerCase().trim();
+    const movieContainer = document.getElementById('movie-container');
 
-  // Clear previous results
-  movieContainer.innerHTML = '';
+    movieContainer.innerHTML = ''; // Clear previous results
 
-  // Check if the search box is empty
-  if (!query) {
-    searchBox.placeholder = 'Text box is empty!'; // Change placeholder
-    setTimeout(() => {
-      location.reload(); // Reload the page after 3 seconds
-    }, 3000); // 3000 milliseconds = 3 seconds
-    return; // Exit the function early
-  }
-
-  searchBox.placeholder = 'Searching movies...'; // Change placeholder to indicate search is in progress
-  const loadingMessage = document.createElement('p');
-  loadingMessage.textContent = 'Searching...';
-  movieContainer.appendChild(loadingMessage);
-
-  // Filter movies based on the query
-  const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(query));
-
-  // Simulate a delay for loading feedback
-  setTimeout(() => {
-    movieContainer.innerHTML = ''; // Clear loading message
-    searchBox.placeholder = 'Search Movies...'; // Reset placeholder
-
-    if (filteredMovies.length > 0) {
-      displayMovies(filteredMovies); // Display filtered movies
-    } else {
-      // No results found - change placeholder to indicate no results
-      searchBox.placeholder = 'Movies not found...'; 
-      const noResultsMessage = document.createElement('p');
-      noResultsMessage.textContent = 'Search can\'t be found.';
-      movieContainer.appendChild(noResultsMessage);
-      
-      // Reload the page after 3 seconds if no movies found
-      setTimeout(() => {
-        location.reload(); // Reload the page after 3 seconds
-      }, 3000); // 3000 milliseconds = 3 seconds
+    if (!query) {
+        searchBox.placeholder = 'Text box is empty!';
+        setTimeout(() => {
+            location.reload();
+        }, 3000);
+        return;
     }
 
-    // Clear the input field after processing the search
-    searchBox.value = '';
-  }, 500);
+    searchBox.placeholder = 'Searching movies...';
+    const loadingMessage = document.createElement('p');
+    loadingMessage.textContent = 'Searching...';
+    movieContainer.appendChild(loadingMessage);
+
+    const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(query));
+
+    setTimeout(() => {
+        movieContainer.innerHTML = '';
+        searchBox.placeholder = 'Search Movies...';
+
+        if (filteredMovies.length > 0) {
+            displayMovies(filteredMovies);
+        } else {
+            searchBox.placeholder = 'Movies not found...';
+            const noResultsMessage = document.createElement('p');
+            noResultsMessage.textContent = 'Search can\'t be found.';
+            movieContainer.appendChild(noResultsMessage);
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        }
+
+        searchBox.value = '';
+    }, 500);
 }
-
-
-
-
-
-
-// Duration format
-
 
 function displayMovies(moviesToDisplay) {
     const movieContainer = document.getElementById('movie-container');
-    movieContainer.innerHTML = ''; // Clear existing content
+    movieContainer.innerHTML = '';
 
     if (moviesToDisplay.length > 0) {
         moviesToDisplay.forEach(movie => {
             const movieCard = `
-                <div class="movie-card" onclick="handleCardClick(event);">
+                <div class="movie-card fade-in" onclick="handleCardClick(event);">
                     <div class="card-inner">
                         <div class="card-front">
-                                 <div class="quality-duration-genre">
-        <div class="quality">${movie.quality}</div>
-        <div class="duration">${movie.duration}</div>
-<div class="genre">${movie.genre}</div>
-
-    </div>
+                            <div class="quality-duration-genre">
+                                <div class="quality">${movie.quality}</div>
+                                <div class="duration">${movie.duration}</div>
+                                <div class="genre">${movie.genre}</div>
+                            </div>
                             <img src="${movie.img}" alt="${movie.title}" />
                             <h1>${movie.title}</h1>
-
                         </div>
-
-<div class="card-back" style="position: relative; text-align: center;">
-    <div class="synopsis">${movie.synopsis}</div>
-    <button class="play-button" style="color: white; background-color: violet; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
-  <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
-    <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
-</div>
+                        <div class="card-back" style="position: relative; text-align: center;">
+                            <div class="synopsis">${movie.synopsis}</div>
+                            <button class="play-button" style="color: white; background-color: violet; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
+                            <div class="movie-url" style="display: none;">${movie.url}</div>
+                        </div>
                     </div>
                 </div>
             `;
@@ -421,48 +415,54 @@ function displayMovies(moviesToDisplay) {
     }
 }
 
-// Call the function to display movies
-displayMovies(movies);
-
-
 function displayPaginatedMovies(page) {
     const startIndex = (page - 1) * moviesPerPage;
     const endIndex = Math.min(startIndex + moviesPerPage, movies.length);
     const movieContainer = document.getElementById('movie-container');
-    movieContainer.innerHTML = '';
+    const movieCards = [];
 
     if (startIndex < movies.length) {
         for (let i = startIndex; i < endIndex; i++) {
             const movie = movies[i];
             const movieCard = `
-                <div class="movie-card" onclick="handleCardClick(event);">
+                <div class="movie-card fade-in" onclick="handleCardClick(event);">
                     <div class="card-inner">
                         <div class="card-front">
-                              <div class="quality-duration-genre">
-        <div class="quality">${movie.quality}</div>
-        <div class="duration">${movie.duration}</div>
-<div class="genre">${movie.genre}</div>
-
-    </div>         <img src="${movie.img}" alt="${movie.title}" />
+                            <div class="quality-duration-genre">
+                                <div class="quality">${movie.quality}</div>
+                                <div class="duration">${movie.duration}</div>
+                                <div class="genre">${movie.genre}</div>
+                            </div>
+                            <img src="${movie.img}" alt="${movie.title}" />
                             <h1>${movie.title}</h1>
-  
-                            <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
                         </div>
-                     <div class="card-back" style="position: relative; text-align: center;">
-    <div class="synopsis">${movie.synopsis}</div>
-    <button class="play-button" style="color: white; background-color: violet; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
-
-    <div class="movie-url" style="display: none;">${movie.url}</div> <!-- Hidden URL -->
-</div>
-
-
+                        <div class="card-back" style="position: relative; text-align: center;">
+                            <div class="synopsis">${movie.synopsis}</div>
+                            <button class="play-button" style="color: white; background-color: violet; border: none; padding: 10px 20px; border-radius: 5px; position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">PLAY ▶</button>
+                            <div class="movie-url" style="display: none;">${movie.url}</div>
+                        </div>
                     </div>
                 </div>
             `;
-            movieContainer.innerHTML += movieCard;
+            movieCards.push(movieCard);
         }
     } else {
         movieContainer.innerHTML = '<p>No movies found.</p>';
+    }
+
+    const existingCards = movieContainer.querySelectorAll('.movie-card');
+    if (existingCards.length > 0) {
+        existingCards.forEach(card => card.classList.add('fade-out'));
+
+        setTimeout(() => {
+            movieContainer.innerHTML = movieCards.join('');
+            const newCards = movieContainer.querySelectorAll('.movie-card');
+            newCards.forEach(card => card.classList.add('fade-in'));
+        }, 500);
+    } else {
+        movieContainer.innerHTML = movieCards.join('');
+        const newCards = movieContainer.querySelectorAll('.movie-card');
+        newCards.forEach(card => card.classList.add('fade-in'));
     }
 
     document.getElementById('page-info').textContent = `Page ${page}`;
@@ -470,7 +470,6 @@ function displayPaginatedMovies(page) {
     document.getElementById('next-btn').disabled = (endIndex >= movies.length);
 }
 
-// Pagination button event listeners
 document.getElementById('prev-btn').addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
@@ -487,18 +486,18 @@ document.getElementById('next-btn').addEventListener('click', () => {
 
 // Initial display
 displayPaginatedMovies(currentPage);
-function loadMovie(movieUrl) {
-    // Change the iframe source
-    document.querySelector('.movie-iframe').src = movieUrl;
 
-    // Scroll to the top of the iframe container
+function loadMovie(movieUrl) {
+    document.querySelector('.movie-iframe').src = movieUrl;
     document.querySelector('.iframe-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
 document.addEventListener('click', function(event) {
     const playButton = event.target.closest('.play-button');
     if (playButton) {
-        const movieUrl = playButton.parentElement.querySelector('.movie-url').innerText; // Get the hidden URL from the parent of play-button
-        loadMovie(movieUrl); // Load the movie in the iframe
+        const movieUrl = playButton.parentElement.querySelector('.movie-url').innerText;
+        loadMovie(movieUrl);
     }
 });
+
 
