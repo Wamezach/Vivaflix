@@ -1,5 +1,14 @@
 const movies = [
  {
+  "title": "Kapalit",
+  "duration": "120min",
+  "genre": "Vivamax",
+  "quality": "HD",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kapalit.PNG",
+  "url": "https://mega.nz/embed/GFwnxY6C#k8DZ4MnFsJeyHPmSFMtw2Sr5FmvlgdR0I5FSBDi3y_M",
+  "synopsis": "Audrey is hired as a private nurse by Stan for his sick wife, Demi. But as Audrey spends time with the married couple, she falls for Stan and works her way to replace Demi as Stan's lover."
+},
+ {
   "title": "Kamasutra 2008",
   "duration": "120min",
   "genre": "Romance",
