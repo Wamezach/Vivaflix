@@ -1,5 +1,14 @@
 const movies = [
  {
+  "title": "Kamasutra 2008",
+  "duration": "120min",
+  "genre": "Romance",
+  "quality": "HD",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kamasutra_2008.PNG",
+  "url": "https://mega.nz/embed/TE5AXD7C#c-hEJ-C_HnZNdl3QFNJFrB20M9WBCzo9l3dOzKb6hyA",
+  "synopsis": "Director\nPierre Roshan"
+},
+ {
   "title": "Halimuyak",
   "duration": "120min",
   "genre": "Romance",
