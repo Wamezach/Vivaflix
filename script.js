@@ -469,7 +469,6 @@ function displayPaginatedMovies(page) {
     document.getElementById('prev-btn').disabled = (page === 1);
     document.getElementById('next-btn').disabled = (endIndex >= movies.length);
 }
-
 // Pagination button event listeners
 document.getElementById('prev-btn').addEventListener('click', () => {
     if (currentPage > 1) {
@@ -480,7 +479,7 @@ document.getElementById('prev-btn').addEventListener('click', () => {
             currentPage--;
             displayPaginatedMovies(currentPage);
             movieList.classList.remove('fade-out');
-        }, 500); // Duration should match the CSS transition duration
+        }, 500);
     }
 });
 
@@ -493,24 +492,24 @@ document.getElementById('next-btn').addEventListener('click', () => {
             currentPage++;
             displayPaginatedMovies(currentPage);
             movieList.classList.remove('fade-out');
-        }, 500); // Duration should match the CSS transition duration
+        }, 500);
     }
 });
 
 // Initial display
 displayPaginatedMovies(currentPage);
-function loadMovie(movieUrl) {
-    // Change the iframe source
-    document.querySelector('.movie-iframe').src = movieUrl;
 
-    // Scroll to the top of the iframe container
+function loadMovie(movieUrl) {
+    document.querySelector('.movie-iframe').src = movieUrl;
     document.querySelector('.iframe-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
 document.addEventListener('click', function(event) {
     const playButton = event.target.closest('.play-button');
     if (playButton) {
-        const movieUrl = playButton.parentElement.querySelector('.movie-url').innerText; // Get the hidden URL from the parent of play-button
-        loadMovie(movieUrl); // Load the movie in the iframe
+        const movieUrl = playButton.parentElement.querySelector('.movie-url').innerText;
+        loadMovie(movieUrl);
     }
 });
+
 
