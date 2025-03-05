@@ -1,4 +1,22 @@
 const movies = [
+ {
+  "title": "Halimuyak",
+  "duration": "120min",
+  "genre": "Romance",
+  "quality": "HD",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Halimuyak.PNG",
+  "url": "https://mega.nz/embed/ORpyyQrC#bM4shofLKX4kb6ho0rvlFKUpEG_sDY9ZHMD1lp6DOL0",
+  "synopsis": "Mikee falls for a beautiful perfumer, but their romance is jeopardized when a mysterious fragrance connects their pasts. As secrets unravel, they must confront painful truths and fight to keep their newfound love alive."
+},
+  {
+  "title": "Hiram na sandali",
+  "duration": "120min",
+  "genre": "Romance",
+  "quality": "HD",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Hiram_na_sandali.PNG",
+  "url": "https://mega.nz/embed/zV5AwTpL#TWT7k5Nv46rsTEABrXd-Qwhd4v7ehNTt1BFF0NPbR-Y",
+  "synopsis": "An ex-couple accidentally bumps into each other whenever they visit their dog's grave on its death anniversary. These chance meetings will later lead to a passionate reunion of the two."
+},
   {
   "title": "Belyas",
   "duration": "120min",
