@@ -1,4 +1,10 @@
+.movie-card.fade-out {
+            opacity: 0; /* Fade out effect */
+        }
 
+        .movie-card.fade-in {
+            opacity: 1; /* Fade in effect */
+        }
 
 .movie-list.fade-out {
     opacity: 0;
