@@ -1,5 +1,23 @@
 const movies = [
  {
+  "title": "Kaulayaw",
+  "duration": "120min",
+  "genre": "Vivamax",
+  "quality": "HD",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kaulayaw.PNG",
+  "url": "https://mega.nz/embed/vJ5TAYLY#81HvT8xRYMoEHySwnTprWXnFW7zad0O1biOz6Xf-xQ8",
+  "synopsis": "Robb Guinto and Micaela Raz heat up the screen as college schoolmates who venture into the world of cybersex to support their needs. They fulfill their fans' sexual fantasy only to realized that they too, are falling for each other."
+},
+ {
+  "title": "Katas",
+  "duration": "120min",
+  "genre": "Vivamax",
+  "quality": "HD",
+  "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Katas.PNG",
+  "url": "https://mega.nz/embed/HNhTmSJK#lZUlLo_kv56DWKBjUMBcwojZFoXgz1aiDGJWAnIxcR0",
+  "synopsis": "Carmina works as a maid in a mansion and soon learns about the dirty secret of their masters, Alex and Grace."
+},
+ {
   "title": "Kapalit",
   "duration": "120min",
   "genre": "Vivamax",
