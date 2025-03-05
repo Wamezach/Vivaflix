@@ -1,4 +1,13 @@
 const movies = [
+  {
+  "title": "Belyas",
+  "duration": "120min",
+  "genre": "Romance",
+  "quality": "HD",
+  "img": "Images/Belyas.PNG",
+  "url": "https://mega.nz/embed/WUAyjQyQ#M4UAlmailVoGNHteecPrV6wsyWc7lVcKHU05vC8pOmQ",
+  "synopsis": "A housewife who is tired of her controlling husband takes a different turn when two young prostitutes rent their apartment. As she befriends the two. She begins to admire the sexual freedom they have."
+},
    {
  "title": "Ang Kapitbahay",
   "duration": "120min",
