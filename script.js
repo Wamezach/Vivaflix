@@ -1,5 +1,23 @@
 const movies = [
  {
+    "title": "Kiskisan",
+    "duration": "120min",
+    "genre": "Vivamax",
+    "quality": "HD",
+    "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Kiskisan.PNG",
+    "url": "https://mega.nz/embed/zNIxCAIA#Y08s_m9uhmwWg4cN8kLSIFrFBB7Kssef4R1tiopq6ew",
+    "synopsis": "Steamy tale of love, lust, and betrayal. When Adele's sister Bea returns with her girlfriend Cheska, a secret affair begins between Cheska and Adele's boyfriend, Rener, leading to a climactic ending when they're caught."
+  },
+  {
+    "title": "Krista",
+    "duration": "120min",
+    "genre": "Vivamax",
+    "quality": "HD",
+    "img": "https://raw.githubusercontent.com/Wamezach/Vivaflix/main/Images/Krista.PNG",
+    "url": "https://mega.nz/embed/GE4nwSJK#fnq8dbA-MazwtXEHRTdoqzXuSEEqDOTJujPY2cfPrBc",
+    "synopsis": "Krista is happy with the simple life she's living with the husband she loves very much. But her ambitious husband ends up losing big at cockfighting, forcing him to commit a crime, and leading Krista to use her body to save him."
+  },
+ {
   "title": "Kaulayaw",
   "duration": "120min",
   "genre": "Vivamax",
