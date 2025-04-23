@@ -113,7 +113,7 @@ const API_KEY = 'a1e72fd93ed59f56e6332813b9f8dcae';
       const movies = await fetchTrending('movie');
       const tvShows = await fetchTrending('tv');
       const anime = await fetchTrendingAnime();
-         const companyMovies = await fetchCompanyMovies(149142); // Company ID 149142
+         const companyMovies = await fetchCompanyMovies('149142'); // Company ID 149142
 
       displayBanner(movies[Math.floor(Math.random() * movies.length)]);
       displayList(movies, 'movies-list');
