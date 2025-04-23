@@ -110,7 +110,7 @@ async function searchTMDB() {
 
 async function init() {
   const companyId = 149142; // Specify the company ID here
-  const movies = await fetchTrending('movie', companyId);
+  const movies = await fetchTrending('movie', 149142);
   const tvShows = await fetchTrending('tv', companyId); // You can modify if company API supports TV
   const anime = await fetchTrendingAnime();
 
